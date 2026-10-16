@@ -10,6 +10,8 @@
 <meta property="og:description" content="Ramos, bodas, eventos y coronas con más de 70 años de oficio. Reparto en el día.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_ES">
+<!-- Imagen al compartir: cambiar la URL al dominio floressantamarta.com al publicar -->
+<meta property="og:image" content="https://kikogarciadv.github.io/floressantamarta/img/img-20191022-wa0061.jpg">
 <meta name="theme-color" content="#ffffff">
 <!-- Versión de prueba: quitar esta línea al publicar en floressantamarta.com -->
 <meta name="robots" content="noindex">
@@ -23,7 +25,10 @@
   "@type": "Florist",
   "name": "Flores Santa Marta",
   "url": "https://www.floressantamarta.com/",
+  "description": "Floristería en el centro de Córdoba desde hace más de 70 años. Ramos, bodas, eventos, Semana Santa, coronas y plantas. Miembro de Interflora.",
+  "image": "https://www.floressantamarta.com/img/img-20191022-wa0061.jpg",
   "telephone": "+34957470818",
+  "hasMap": "https://www.google.com/maps/search/?api=1&query=Flores+Santa+Marta+Calle+Osario+20+C%C3%B3rdoba",
   "email": "floressantamarta@hotmail.com",
   "address": {
     "@type": "PostalAddress",
@@ -93,6 +98,12 @@
 
 <main id="contenido">
 
+  <!-- Campaña de temporada: cambiar texto y mensaje de WhatsApp en cada fecha (Navidad, San Valentín, Día de la Madre...) -->
+  <aside class="season" aria-label="Campaña de temporada">
+    <p><strong>Todos los Santos</strong>Ramos y centros para el cementerio. Encárgalos con tiempo.</p>
+    <a href="https://wa.me/34616524337?text=Hola%2C%20quer%C3%ADa%20encargar%20flores%20para%20Todos%20los%20Santos" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+  </aside>
+
   <!-- Portada -->
   <section class="banner banner-hero">
     <img src="img/img-20191022-wa0061.jpg" alt="Centro de hortensias, rosas y paniculata en tonos pastel" width="1491" height="1120">
@@ -100,7 +111,10 @@
       <p class="kicker">Desde hace más de 70 años</p>
       <h1>Flores Santa Marta</h1>
       <p class="banner-text">Floristería en el centro de Córdoba. Ramos, bodas, eventos y condolencias hechos a mano en nuestro taller de la calle Osario.</p>
-      <a class="btn" href="https://wa.me/34616524337?text=Hola%2C%20quer%C3%ADa%20hacer%20un%20encargo" target="_blank" rel="noopener">Hacer un encargo</a>
+      <div class="btn-row">
+        <a class="btn" href="https://wa.me/34616524337?text=Hola%2C%20quer%C3%ADa%20hacer%20un%20encargo" target="_blank" rel="noopener">Encargar por WhatsApp</a>
+        <a class="btn btn-light" href="tel:+34957470818">Llamar 957 470 818</a>
+      </div>
     </div>
   </section>
 
@@ -176,6 +190,40 @@
     </ul>
   </section>
 
+  <!-- Cómo encargar -->
+  <section class="section bg-paper" id="como-encargar">
+    <h2 class="label">Cómo hacer tu encargo</h2>
+    <p class="section-intro">Sin formularios ni registros: hablas directamente con la floristería.</p>
+    <ol class="steps">
+      <li>
+        <h3>Escríbenos o llama</h3>
+        <p>Por WhatsApp al 616 524 337 o al 957 470 818. Si tienes una foto de referencia, mándanosla.</p>
+      </li>
+      <li>
+        <h3>Te aconsejamos</h3>
+        <p>Dinos la ocasión, tu presupuesto, el día y el mensaje de la tarjeta. Te proponemos el ramo.</p>
+      </li>
+      <li>
+        <h3>Lo preparamos y lo llevamos</h3>
+        <p>Recógelo en la calle Osario o te lo llevamos a domicilio en Córdoba. Fuera de Córdoba, con Interflora.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- Precios -->
+  <section class="section" id="precios">
+    <h2 class="label">Precios orientativos</h2>
+    <p class="section-intro">Cada encargo se hace a medida. Estos son los precios de partida.</p>
+    <ul class="prices">
+      <li><a class="item" href="flores.html">Ramo de flores</a><span class="from">desde <span class="todo">[PENDIENTE] €</span></span></li>
+      <li><a class="item" href="flores.html">Centro de flores</a><span class="from">desde <span class="todo">[PENDIENTE] €</span></span></li>
+      <li><a class="item" href="plantas.html">Orquídea o planta</a><span class="from">desde <span class="todo">[PENDIENTE] €</span></span></li>
+      <li><a class="item" href="condolencias.html">Corona o centro de condolencia</a><span class="from">desde <span class="todo">[PENDIENTE] €</span></span></li>
+      <li><a class="item" href="bodas.html">Ramo de novia</a><span class="from">desde <span class="todo">[PENDIENTE] €</span></span></li>
+    </ul>
+    <p class="prices-note">Reparto a domicilio en Córdoba: <span class="todo">[PENDIENTE: precio del reparto]</span>. Pregúntanos sin compromiso.</p>
+  </section>
+
   <!-- Historia -->
   <section class="split" id="historia">
     <div class="split-media">
@@ -229,6 +277,16 @@
       <li>Hotel Córdoba Center</li>
       <li>Tanatorios de Córdoba</li>
     </ul>
+  </section>
+
+  <!-- Reseñas -->
+  <section class="cta-band" id="opiniones">
+    <h2 class="label">Lo que dicen nuestros clientes</h2>
+    <p class="lead">Lee las opiniones de quienes ya nos han encargado flores, y si has sido cliente, cuéntanos qué te pareció.</p>
+    <div class="btn-row">
+      <!-- Cambiar por el enlace directo de reseñas de la ficha de Google cuando lo tengamos -->
+      <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Flores+Santa+Marta+Calle+Osario+20+C%C3%B3rdoba" target="_blank" rel="noopener">Ver y dejar reseñas en Google</a>
+    </div>
   </section>
 
   <!-- Contacto -->

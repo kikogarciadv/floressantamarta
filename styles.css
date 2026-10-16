@@ -270,6 +270,30 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 .cta-band .lead { max-width: 620px; margin: 1rem auto 1.8rem; }
 .cta-band .btn-row { justify-content: center; }
 
+/* Campaña de temporada (cambiar el texto en index.html según la fecha) */
+.season {
+  display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 22px;
+  padding: 16px var(--gutter); background: var(--paper); border-bottom: 1px solid var(--line); text-align: center;
+}
+.season p { margin: 0; font-family: var(--serif); font-size: 1.2rem; }
+.season strong { font-family: var(--sans); font-size: .76rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--rose-dark); margin-right: 10px; }
+.season a { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; white-space: nowrap; }
+.season a:hover { color: var(--rose-dark); border-color: var(--rose-dark); }
+
+/* Botón claro sobre foto */
+.btn-light { background: transparent; color: #fff; border-color: #fff; }
+.btn-light:hover { background: #fff; color: var(--ink); border-color: #fff; }
+.banner .btn-row { justify-content: center; }
+
+/* Precios orientativos */
+.prices { list-style: none; margin: 0 auto; padding: 0; max-width: 640px; }
+.prices li { display: flex; align-items: baseline; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.prices li::after { content: ""; order: 1; flex: 1; border-bottom: 1px dotted var(--line); }
+.prices .item { font-family: var(--serif); font-size: 1.25rem; text-decoration: none; }
+.prices a.item:hover { color: var(--rose-dark); }
+.prices .from { order: 2; color: var(--ink-soft); white-space: nowrap; }
+.prices-note { text-align: center; color: var(--ink-soft); font-size: .9rem; margin: 22px auto 0; max-width: 520px; }
+
 /* WhatsApp flotante */
 .wa-float {
   position: fixed; right: 18px; bottom: 18px; z-index: 60;
