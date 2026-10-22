@@ -13,6 +13,7 @@
 <!-- Imagen al compartir: cambiar la URL al dominio floressantamarta.com al publicar -->
 <meta property="og:image" content="https://kikogarciadv.github.io/floressantamarta/img/img-20191022-wa0061.jpg">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <!-- Versión de prueba: quitar esta línea al publicar en floressantamarta.com -->
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,8 +24,11 @@
 {
   "@context": "https://schema.org",
   "@type": "Florist",
+  "@id": "https://www.floressantamarta.com/#floristeria",
   "name": "Flores Santa Marta",
   "url": "https://www.floressantamarta.com/",
+  "foundingDate": "1945",
+  "sameAs": ["https://www.instagram.com/santamartafloristas/"],
   "description": "Floristería en el centro de Córdoba desde hace más de 70 años. Ramos, bodas, eventos, Semana Santa, coronas y plantas. Miembro de Interflora.",
   "image": "https://www.floressantamarta.com/img/img-20191022-wa0061.jpg",
   "telephone": "+34957470818",
@@ -106,9 +110,9 @@
 
   <!-- Portada -->
   <section class="banner banner-hero">
-    <img src="img/img-20191022-wa0061.jpg" alt="Centro de hortensias, rosas y paniculata en tonos pastel" width="1491" height="1120">
+    <img src="img/img-20191022-wa0061.jpg" alt="Centro de hortensias, rosas y paniculata en tonos pastel" width="1491" height="1120" fetchpriority="high">
     <div class="banner-content">
-      <p class="kicker">Desde hace más de 70 años</p>
+      <p class="kicker">Floristas en Córdoba desde 1945</p>
       <h1>Flores Santa Marta</h1>
       <p class="banner-text">Floristería en el centro de Córdoba. Ramos, bodas, eventos y condolencias hechos a mano en nuestro taller de la calle Osario.</p>
       <div class="btn-row">
@@ -309,8 +313,13 @@
         <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Flores+Santa+Marta+Calle+Osario+20+C%C3%B3rdoba" target="_blank" rel="noopener">Cómo llegar</a>
       </div>
     </div>
-    <div class="map">
-      <iframe title="Mapa: Flores Santa Marta, Calle Osario 20, Córdoba" src="https://www.google.com/maps?q=Calle+Osario+20,+14001+C%C3%B3rdoba&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <!-- El mapa de Google solo se carga al pulsar: la página va más rápida y no hay cookies de Google sin permiso -->
+    <div class="map" data-src="https://www.google.com/maps?q=Calle+Osario+20,+14001+C%C3%B3rdoba&output=embed">
+      <button class="map-load" type="button">
+        <span class="map-pin" aria-hidden="true"></span>
+        <span class="map-title">Calle Osario, 20</span>
+        <span class="map-hint">Ver mapa (se carga Google Maps)</span>
+      </button>
     </div>
   </section>
 
@@ -320,7 +329,7 @@
   <div class="footer-cols">
     <div>
       <span class="logo-name logo-name-sm">Santa Marta</span>
-      <p>Floristería en Córdoba desde hace más de 70 años. Miembro de Interflora.</p>
+      <p>Floristería en Córdoba desde 1945. Miembro de Interflora.</p>
     </div>
     <div>
       <h2>Flores</h2>
@@ -339,6 +348,7 @@
       <a href="tel:+34957470818">957 470 818</a>
       <a href="https://wa.me/34616524337" target="_blank" rel="noopener">WhatsApp 616 524 337</a>
       <a href="mailto:floressantamarta@hotmail.com">floressantamarta@hotmail.com</a>
+      <a href="https://www.instagram.com/santamartafloristas/" target="_blank" rel="noopener">Instagram @santamartafloristas</a>
     </div>
   </div>
   <p class="footer-bottom">© <span id="year"></span> Flores Santa Marta · C/ Osario 20, Córdoba</p>

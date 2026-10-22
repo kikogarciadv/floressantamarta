@@ -13,12 +13,23 @@
 <!-- Imagen al compartir: cambiar la URL al dominio floressantamarta.com al publicar -->
 <meta property="og:image" content="https://kikogarciadv.github.io/floressantamarta/img/dsc_0370_1500.jpg">
 <meta name="theme-color" content="#ffffff">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <!-- Versión de prueba: quitar esta línea al publicar en floressantamarta.com -->
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://www.floressantamarta.com/" },
+    { "@type": "ListItem", "position": 2, "name": "Eventos y Semana Santa", "item": "https://www.floressantamarta.com/eventos.html" }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -72,7 +83,7 @@
 <main id="contenido">
 
   <section class="banner page-hero">
-    <img src="img/dsc_0370_1500.jpg" alt="Hortensias y eucalipto en la tienda de la calle Osario" width="1500" height="1000">
+    <img src="img/dsc_0370_1500.jpg" alt="Hortensias y eucalipto en la tienda de la calle Osario" width="1500" height="1000" fetchpriority="high">
     <div class="banner-content">
       <p class="crumbs"><a href="index.html">Inicio</a> · Eventos</p>
       <h1>Eventos y Semana Santa</h1>
@@ -157,7 +168,7 @@
   <div class="footer-cols">
     <div>
       <span class="logo-name logo-name-sm">Santa Marta</span>
-      <p>Floristería en Córdoba desde hace más de 70 años. Miembro de Interflora.</p>
+      <p>Floristería en Córdoba desde 1945. Miembro de Interflora.</p>
     </div>
     <div>
       <h2>Flores</h2>
@@ -176,6 +187,7 @@
       <a href="tel:+34957470818">957 470 818</a>
       <a href="https://wa.me/34616524337" target="_blank" rel="noopener">WhatsApp 616 524 337</a>
       <a href="mailto:floressantamarta@hotmail.com">floressantamarta@hotmail.com</a>
+      <a href="https://www.instagram.com/santamartafloristas/" target="_blank" rel="noopener">Instagram @santamartafloristas</a>
     </div>
   </div>
   <p class="footer-bottom">© <span id="year"></span> Flores Santa Marta · C/ Osario 20, Córdoba</p>

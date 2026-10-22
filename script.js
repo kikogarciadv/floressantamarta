@@ -31,13 +31,18 @@ if (shots.length) {
   document.body.appendChild(box);
   const big = box.querySelector('img');
   let current = 0;
+  let opener = null;
 
   const show = (i) => {
     current = (i + shots.length) % shots.length;
     big.src = shots[current].src;
     big.alt = shots[current].alt;
   };
-  const close = () => box.classList.remove('open');
+  // Al cerrar, el foco vuelve a la foto que se abrió
+  const close = () => {
+    box.classList.remove('open');
+    if (opener) opener.focus();
+  };
 
   shots.forEach((img, i) => {
     const btn = document.createElement('button');
@@ -45,7 +50,7 @@ if (shots.length) {
     btn.setAttribute('aria-label', 'Ampliar: ' + img.alt);
     img.replaceWith(btn);
     btn.appendChild(img);
-    btn.addEventListener('click', () => { show(i); box.classList.add('open'); box.querySelector('.lb-close').focus(); });
+    btn.addEventListener('click', () => { opener = btn; show(i); box.classList.add('open'); box.querySelector('.lb-close').focus(); });
   });
 
   box.querySelector('.lb-close').addEventListener('click', close);
@@ -57,5 +62,24 @@ if (shots.length) {
     if (e.key === 'Escape') close();
     if (e.key === 'ArrowLeft') show(current - 1);
     if (e.key === 'ArrowRight') show(current + 1);
+    // Mantener el foco dentro de la foto ampliada
+    if (e.key === 'Tab') {
+      const btns = [...box.querySelectorAll('button')];
+      const i = btns.indexOf(document.activeElement);
+      const next = e.shiftKey ? i - 1 : i + 1;
+      if (next < 0 || next >= btns.length) { e.preventDefault(); btns[(next + btns.length) % btns.length].focus(); }
+    }
+  });
+}
+
+// Mapa: cargar Google Maps solo al pulsar
+const map = document.querySelector('.map[data-src]');
+if (map) {
+  map.querySelector('.map-load').addEventListener('click', () => {
+    const frame = document.createElement('iframe');
+    frame.title = 'Mapa: Flores Santa Marta, Calle Osario 20, Córdoba';
+    frame.src = map.dataset.src;
+    frame.referrerPolicy = 'no-referrer-when-downgrade';
+    map.replaceChildren(frame);
   });
 }
