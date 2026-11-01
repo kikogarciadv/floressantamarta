@@ -1,4 +1,4 @@
-/* Estilo editorial: blanco, negro, Garamond, salvia y rosa empolvado */
+/* Estilo editorial: blanco, negro, Garamond y verde salvia */
 :root {
   --white: #ffffff;
   --paper: #f6f4f0;
@@ -6,10 +6,8 @@
   --ink-soft: #555049;
   --line: #e6e2dc;
   --sage: #6e9475;
-  --sage-dark: #557a5c;
-  --rose: #c47f8a;
-  --rose-dark: #a35f6b; /* texto blanco sobre él: 4,8:1 */
-  --rose-deep: #8c4f5b;
+  --sage-dark: #557a5c; /* texto blanco sobre él: 4,9:1 */
+  --sage-deep: #44644a;
   --whatsapp: #25a35a;
   --serif: "EB Garamond", Garamond, Baskerville, "Times New Roman", serif;
   --sans: "Jost", "Futura", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -44,7 +42,7 @@ h1, h2, h3 { margin: 0; font-weight: 400; }
 }
 .skip:focus { left: 8px; }
 
-a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); outline-offset: 3px; }
 
 /* Etiqueta en mayúsculas espaciadas (títulos de sección) */
 .label {
@@ -62,7 +60,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
   display: inline-block;
   min-width: 220px;
   padding: 14px 28px;
-  background: var(--rose-dark);
+  background: var(--sage-dark);
   color: #fff;
   text-align: center;
   text-decoration: none;
@@ -71,10 +69,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
   font-weight: 500;
   letter-spacing: .2em;
   text-transform: uppercase;
-  border: 1px solid var(--rose-dark);
+  border: 1px solid var(--sage-dark);
   transition: background .25s, color .25s, border-color .25s;
 }
-.btn:hover { background: var(--rose-deep); border-color: var(--rose-deep); }
+.btn:hover { background: var(--sage-deep); border-color: var(--sage-deep); }
 .btn-outline { background: transparent; color: var(--ink); border-color: var(--ink); }
 .btn-outline:hover { background: var(--ink); color: #fff; border-color: var(--ink); }
 
@@ -96,7 +94,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 }
 .header-side { display: flex; align-items: center; gap: 26px; font-size: .86rem; }
 .header-side a { text-decoration: none; }
-.header-side a:hover { color: var(--rose-dark); }
+.header-side a:hover { color: var(--sage-dark); }
 .header-right { justify-content: flex-end; gap: 18px; }
 .icon-link { display: inline-grid; place-items: center; width: 44px; height: 44px; margin: -9px; }
 .icon-link svg { width: 22px; height: 22px; }
@@ -151,9 +149,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 .tile { position: relative; display: grid; place-items: center; min-height: 460px; overflow: hidden; text-decoration: none; color: #fff; }
 .tile-wide { grid-column: 1 / -1; min-height: 520px; }
 .tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s ease; }
-.tile::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.26); transition: background .4s; }
+.tile::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.38); transition: background .4s; }
 .tile:hover img { transform: scale(1.04); }
-.tile:hover::after { background: rgba(0,0,0,.34); }
+.tile:hover::after { background: rgba(0,0,0,.46); }
 .tile-content { position: relative; z-index: 1; text-align: center; padding: 20px; }
 .tile-title { display: block; font-family: var(--serif); font-size: clamp(2rem, 3.6vw, 3rem); line-height: 1.1; }
 .tile-text { display: inline-block; margin-top: 12px; font-size: .78rem; letter-spacing: .2em; text-transform: uppercase; border-bottom: 1px solid rgba(255,255,255,.7); padding-bottom: 3px; }
@@ -200,7 +198,6 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 .contact dt { font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; font-weight: 500; padding-top: 4px; }
 .contact dd { margin: 0; color: var(--ink-soft); }
 .contact dd a { text-decoration-color: var(--line); text-underline-offset: 3px; }
-.todo { background: #fff3c4; color: #6b5300; padding: 0 6px; }
 .btn-row { display: flex; flex-wrap: wrap; gap: 12px; }
 .map { min-height: 460px; background: var(--paper); }
 .map iframe { display: block; width: 100%; height: 100%; min-height: 460px; border: 0; filter: grayscale(.35); }
@@ -209,10 +206,10 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
   border: 0; cursor: pointer; color: var(--ink); font: inherit;
   background: repeating-linear-gradient(135deg, var(--paper) 0 22px, #efece6 22px 23px);
 }
-.map-pin { width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--rose-dark); margin-bottom: 10px; }
+.map-pin { width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); background: var(--sage-dark); margin-bottom: 10px; }
 .map-title { font-family: var(--serif); font-size: 1.5rem; }
 .map-hint { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
-.map-load:hover .map-hint { color: var(--rose-deep); border-color: var(--rose-deep); }
+.map-load:hover .map-hint { color: var(--sage-deep); border-color: var(--sage-deep); }
 
 /* Pie */
 .site-footer { background: var(--paper); padding: 70px var(--gutter) 30px; font-size: .9rem; }
@@ -226,8 +223,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 
 /* ---------- Páginas interiores ---------- */
 .nav a[aria-current="page"] { border-color: var(--ink); }
+.nav-extra { display: none; } /* En escritorio, Contacto ya está arriba a la derecha */
 .page-hero { min-height: 440px; }
 .page-hero .banner-content { padding: 70px 20px; }
+.banner-plain { background: var(--sage-dark); min-height: 320px; }
+.banner-plain::after { display: none; }
 .crumbs { margin: 0 0 14px; font-size: .74rem; letter-spacing: .2em; text-transform: uppercase; }
 .crumbs a { text-decoration: none; opacity: .85; }
 .crumbs a:hover { opacity: 1; }
@@ -239,21 +239,23 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 
 /* Bloques de servicio: imagen + título + texto */
 .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px 28px; max-width: 1240px; margin: 0 auto; }
+.features-2 { grid-template-columns: repeat(2, 1fr); max-width: 860px; }
 .feature img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; margin-bottom: 22px; }
 .feature h3 { font-family: var(--serif); font-size: 1.6rem; line-height: 1.2; margin-bottom: 10px; }
 .feature p { margin: 0 0 14px; color: var(--ink-soft); }
+.feature-price { font-family: var(--serif); font-size: 1.3rem; color: var(--ink) !important; }
 .feature .more { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; }
-.feature .more:hover { color: var(--rose-dark); border-color: var(--rose-dark); }
+.feature .more:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
 
 /* Lista con viñetas finas */
 .ticks { list-style: none; padding: 0; margin: 0 0 24px; }
 .ticks li { position: relative; padding: 9px 0 9px 26px; border-bottom: 1px solid var(--line); color: var(--ink-soft); }
-.ticks li::before { content: ""; position: absolute; left: 2px; top: 19px; width: 12px; height: 1px; background: var(--rose); }
+.ticks li::before { content: ""; position: absolute; left: 2px; top: 19px; width: 12px; height: 1px; background: var(--sage); }
 
 /* Cómo encargar */
 .steps { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; counter-reset: step; }
 .steps li { counter-increment: step; text-align: center; padding: 0 10px; }
-.steps li::before { content: counter(step); display: block; font-family: var(--serif); font-size: 2.8rem; line-height: 1; color: var(--rose); margin-bottom: 12px; }
+.steps li::before { content: counter(step); display: block; font-family: var(--serif); font-size: 2.8rem; line-height: 1; color: var(--sage); margin-bottom: 12px; }
 .steps h3 { font-family: var(--sans); font-size: .8rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase; margin-bottom: 8px; }
 .steps p { margin: 0; color: var(--ink-soft); }
 .bg-paper { background: var(--paper); }
@@ -291,9 +293,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
   padding: 16px var(--gutter); background: var(--paper); border-bottom: 1px solid var(--line); text-align: center;
 }
 .season p { margin: 0; font-family: var(--serif); font-size: 1.2rem; }
-.season strong { font-family: var(--sans); font-size: .76rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--rose-deep); margin-right: 10px; }
+.season strong { font-family: var(--sans); font-size: .76rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--sage-deep); margin-right: 10px; }
 .season a { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; white-space: nowrap; }
-.season a:hover { color: var(--rose-dark); border-color: var(--rose-dark); }
+.season a:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
 
 /* Botón claro sobre foto */
 .btn-light { background: transparent; color: #fff; border-color: #fff; }
@@ -305,7 +307,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
 .prices li { display: flex; align-items: baseline; gap: 12px; padding: 14px 0; border-bottom: 1px solid var(--line); }
 .prices li::after { content: ""; order: 1; flex: 1; border-bottom: 1px dotted var(--line); }
 .prices .item { font-family: var(--serif); font-size: 1.25rem; text-decoration: none; }
-.prices a.item:hover { color: var(--rose-dark); }
+.prices a.item:hover { color: var(--sage-dark); }
 .prices .from { order: 2; color: var(--ink-soft); white-space: nowrap; }
 .prices-note { text-align: center; color: var(--ink-soft); font-size: .9rem; margin: 22px auto 0; max-width: 520px; }
 
@@ -343,6 +345,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--rose); outline-
     padding: 0 var(--gutter) 16px; border-top: 1px solid var(--line);
   }
   .nav.open { display: flex; }
+  .nav-extra { display: block; }
   .nav a { padding: 13px 0; border-bottom: 1px solid var(--line); font-size: .92rem; }
   .nav-toggle[aria-expanded="true"] span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
   .nav-toggle[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
