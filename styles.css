@@ -53,7 +53,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
   text-transform: uppercase;
   text-align: center;
 }
-.lead { font-family: var(--serif); font-size: 1.45rem; line-height: 1.35; margin: 1rem 0 1.2rem; }
+.lead { text-wrap: balance; font-family: var(--serif); font-size: 1.45rem; line-height: 1.35; margin: 1rem 0 1.2rem; }
 
 /* Botones */
 .btn {
@@ -188,7 +188,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
   list-style: none; padding: 0; margin: 30px auto 0; max-width: 1100px;
   display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 44px;
 }
-.clients li { font-family: var(--serif); font-size: 1.3rem; color: var(--ink-soft); }
+.clients { align-items: center; gap: 30px 56px; }
+.clients img { height: auto; max-width: 38vw; filter: grayscale(1); opacity: .72; }
+.clients img.logo-claro { filter: grayscale(1) invert(1); } /* el logo de FEPAMIC es blanco */
 
 /* Contacto */
 .contact { display: grid; grid-template-columns: 1fr 1.2fr; }
