@@ -177,6 +177,9 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
 .split-text .label { text-align: left; }
 .split-text p:not(.lead) { color: var(--ink-soft); }
 .split-text .btn { margin-top: 18px; }
+/* Variante con la foto más pequeña y enmarcada */
+.split-compact .split-media { display: grid; place-items: center; padding: clamp(32px, 5vw, 72px); }
+.split-compact .split-media img { width: min(100%, 440px); height: auto; min-height: 0; }
 
 /* Rejilla del taller */
 .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; max-width: 1400px; margin: 0 auto; }
@@ -263,7 +266,11 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
 .bg-paper { background: var(--paper); }
 
 /* Galería con ampliación */
-.gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; max-width: 1400px; margin: 0 auto; }
+/* Galería en filas de 4; la última fila incompleta queda centrada */
+.gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 4px; max-width: 1400px; margin: 0 auto; }
+.gallery > * { flex: 0 0 calc((100% - 12px) / 4); }
+.gallery-title { font-family: var(--serif); font-size: 1.6rem; text-align: center; margin: 64px 0 22px; }
+.section-intro + .gallery-title { margin-top: 0; }
 .gallery button { padding: 0; border: 0; background: none; cursor: zoom-in; display: block; }
 .gallery img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: opacity .3s; }
 .gallery button:hover img { opacity: .85; }
@@ -361,7 +368,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
   .contact-text { justify-self: stretch; max-width: none; }
   .grid { grid-template-columns: repeat(2, 1fr); }
   .features { grid-template-columns: 1fr 1fr; }
-  .gallery { grid-template-columns: repeat(3, 1fr); }
+  .gallery > * { flex-basis: calc((100% - 8px) / 3); }
   .steps { grid-template-columns: 1fr; gap: 36px; }
 }
 
@@ -383,7 +390,7 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
   .footer-cols a { padding: 10px 0; }
   .site-footer { padding-bottom: 96px; } /* que el botón de WhatsApp no tape la dirección */
   .features { grid-template-columns: 1fr; }
-  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery > * { flex-basis: calc((100% - 4px) / 2); }
   .page-hero { min-height: 360px; }
   .map, .map-load, .map iframe { min-height: 300px; }
 }
