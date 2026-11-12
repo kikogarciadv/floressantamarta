@@ -330,8 +330,8 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
 .wa-float svg { width: 28px; height: 28px; fill: #fff; }
 
 /* Enlaces pequeños: zona táctil de 44 px sin cambiar su aspecto */
-.topbar a, .season a, .prices .item, .contact dd a { position: relative; }
-.topbar a::before, .season a::before, .prices .item::before, .contact dd a::before {
+.topbar a, .season a, .prices .item, .contact dd a, .feature .more { position: relative; }
+.topbar a::before, .season a::before, .prices .item::before, .contact dd a::before, .feature .more::before {
   content: ""; position: absolute; inset: -12px -6px;
 }
 .prices .item::before { inset: -5px -6px; }
