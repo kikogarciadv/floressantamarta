@@ -305,10 +305,12 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--sage-dark); out
   display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 22px;
   padding: 16px var(--gutter); background: var(--paper); border-bottom: 1px solid var(--line); text-align: center;
 }
-.season p { margin: 0; font-family: var(--serif); font-size: 1.2rem; }
+.season p { margin: 0; font-family: var(--serif); font-size: 1.35rem; }
 .season strong { font-family: var(--sans); font-size: .76rem; font-weight: 500; letter-spacing: .22em; text-transform: uppercase; color: var(--sage-deep); margin-right: 10px; }
 .season a { font-size: .76rem; letter-spacing: .2em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 2px; white-space: nowrap; }
 .season a:hover { color: var(--sage-dark); border-color: var(--sage-dark); }
+.season .btn { min-width: 0; padding: 12px 26px; border: 1px solid var(--sage-dark); }
+.season .btn:hover { color: #fff; background: var(--sage-deep); border-color: var(--sage-deep); }
 
 /* Botón claro sobre foto */
 .btn-light { background: transparent; color: #fff; border-color: #fff; }
